@@ -22,6 +22,4 @@ When(/^I click card Voucher Belanja and click button Tukar$/, async () => {
 Then(/^I should be able to redeem keping$/, async () => {
     // await KepingScreen.historyCheck();
     await KepingScreen.showJumlahKeping();
-
-    // await BerandaScreen.clickKeping();
 });
