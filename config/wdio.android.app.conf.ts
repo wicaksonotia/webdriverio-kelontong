@@ -24,14 +24,14 @@ config.capabilities = [
         // 'appium:udid': 'RR8R30D7QVP',
         'appium:deviceName': 'Pixel 4 API Tiramisu',
         // 'appium:deviceName': 'Pixel 5 API 28',
-        // 'appium:udid': 'f870ac01',
+        'appium:udid': 'f870ac01',
         "appium:platformVersion": "12",
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UIAutomator2',
         // The path to the app
         // 'appium:app': join(process.cwd(), './apps/kasir-sprint0223-qa.apk'),
         // The path to the app
-        'appium:app': join(process.cwd(), './apps/kelontongqa.apk'), //QA
+        'appium:app': join(process.cwd(), './apps/sprint0423-qa.apk'), //QA
         // 'appium:appName': 'AYOKelontongQA.apk',
         // @ts-ignore
         // 'appium:appActivity': '.MainActivity',
