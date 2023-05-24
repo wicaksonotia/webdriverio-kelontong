@@ -53,10 +53,10 @@ class BerandaScreen extends AppScreen {
     private get menuKatalogSRC() { return $('~menuKatalogSRC'); }
     private get menuAngket() { return $('~menuAngket'); }
 
-    private get bottomBarBeranda() { return $('~bottomBarBeranda'); }
-    private get bottomBarDaftarBelanja() { return $('~bottomBarDaftarBelanja'); }
-    private get bottomBarPesan() { return $('~bottomBarPesan'); }
-    private get bottomBarAkunSaya() { return $('~bottomBarAkunSaya'); }
+    private get bottomBarBeranda() { return $('//android.view.ViewGroup[@content-desc="bottomBarBeranda"]/android.view.ViewGroup'); }
+    private get bottomBarDaftarBelanja() { return $('//android.view.ViewGroup[@content-desc="bottomBarDaftarBelanja"]/android.view.ViewGroup'); }
+    private get bottomBarPesan() { return $('//android.view.ViewGroup[@content-desc="bottomBarPesan"]/android.view.ViewGroup'); }
+    private get bottomBarAkunSaya() { return $('//android.view.ViewGroup[@content-desc="bottomBarAkunSaya"]'); }
 
     private get cbDSA() { return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup'); }
     private get btnLanjut() { return $('~btnLanjut'); }
@@ -68,6 +68,8 @@ class BerandaScreen extends AppScreen {
     private get btnBack() { return $('~btnHeaderBack'); }
 
     private get btnKirim() { return $('~btnKIRIM'); }
+
+    private get btnVersiTerbaru() { return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]'); }
 
     //a method to encapsule automation code to interact with the page 
     async beforeshowAccountName() {
@@ -134,6 +136,10 @@ class BerandaScreen extends AppScreen {
         // await this.bottomBarAkunSaya.waitForDisplayed();
         // await this.bottomBarPesan.waitForDisplayed();
         // await driver.pause(1000);
+    }
+
+    async clickNanti() {
+        await this.btnVersiTerbaru.click();
     }
 
     async waitBanner() {

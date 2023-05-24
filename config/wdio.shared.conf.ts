@@ -102,7 +102,6 @@ export const config: WebdriverIO.Config = {
     //     logPath : './',
     //     path: '/wd/hub',
     // }]],
-
     // services: [
     //     [
     //         "appium",
@@ -151,16 +150,16 @@ export const config: WebdriverIO.Config = {
             outputDir: './allure-results',
             disableWebdriverStepsReporting: false,
             disableWebdriverScreenshotsReporting: false,
-            useCucumberStepReporter: false,
+            useCucumberStepReporter: true,
             addConsoleLogs: true,
         }],
-        // [video, {
-        //     outputDir: './reports/video',
-        //     // recordAllActions: true,
-        //     saveAllVideos: true,        // If true, also saves videos for successful test cases
-        //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        //     videoRenderTimeout: 60000,
-        // }],
+        [video, {
+            outputDir: './reports/video',
+            // recordAllActions: true,
+            saveAllVideos: true,        // If true, also saves videos for successful test cases
+            videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+            videoRenderTimeout: 60000,
+        }],
 
 
 
@@ -182,11 +181,11 @@ export const config: WebdriverIO.Config = {
         // './tests/features/beranda/2banner-nonmerokoknonemployee.feature' // unset appium:noReset': true
         // './tests/features/akunsaya/5profildankontak.feature' // set menjadi smoker user, pake akun Ko Jimmy
         // './tests/features/beranda/1banner-merokokemployee.feature' // unset appium:noReset': true, create pop-up notification principal, set menjadi smoker user
-        // './tests/features/beranda/3openvoucher.feature' // set appium:noReset': true
+        // './tests/features/beranda/3openvoucher.feature' // set appium:noReset': true -> itu yang mana?
         // './tests/features/beranda/4hiburanpeluangterdekat.feature' //tambahin timeout jd 48000
-        // './tests/features/daftarbelanja/6daftarbelanja.feature'
+        './tests/features/daftarbelanja/6daftarbelanja.feature'
         // './tests/features/beranda/8redeemkeping.feature' // create b2c voucher & Katalog principal
-        './tests/features/getkeping/9getkeping.feature'
+        // './tests/features/getkeping/9getkeping.feature'
         // './tests/features/getkeping/10getkeping.feature'
         // './tests/features/getkeping/9-10getkeping.feature'
 
@@ -213,11 +212,11 @@ export const config: WebdriverIO.Config = {
             // './tests/specs/beranda/2banner-nonmerokoknonemployee.spec.ts'
             // './tests/specs/akunsaya/5profildankontak.spec.ts'
             // './tests/specs/beranda/1banner-merokokemployee.spec.ts'
-            // './tests/specs/beranda/3openvoucher.spec.ts' 
+            // './tests/specs/beranda/3openvoucher.spec.ts'
             // './tests/specs/beranda/4hiburanpeluangterdekat.spec.ts'
-            // './tests/specs/daftarbelanja/6daftarbelanja.spec.ts'
+            './tests/specs/daftarbelanja/6daftarbelanja.spec.ts'
             // './tests/specs/beranda/8redeemkeping.spec.ts'
-            './tests/specs/getkeping/9getkeping.spec.ts'
+            // './tests/specs/getkeping/9getkeping.spec.ts'
             // './tests/specs/getkeping/10getkeping.spec.ts'
             // './tests/specs/getkeping/9-10getkeping.spec.ts'
 

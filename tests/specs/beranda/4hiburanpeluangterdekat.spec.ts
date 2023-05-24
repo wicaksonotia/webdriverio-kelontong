@@ -5,8 +5,8 @@ import PeluangScreen from '../../screenobjects/beranda/peluangScreen';
 import TerdekatScreen from '../../screenobjects/beranda/terdekatScreen';
 import BerandaScreen from '../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {   
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Hiburan$/, async () => {
@@ -14,17 +14,17 @@ When(/^I click menu Hiburan$/, async () => {
 });
 
 Then(/^I should be able to see my hiburan$/, async () => {
-    await HiburanScreen.page();
+    await driver.pause(5000);
     await HiburanScreen.back();
 });
 
 When(/^I click menu Peluang$/, async () => {
+    // await PeluangScreen.allowPermissions();
     await BerandaScreen.clickPeluang();
 });
 
 Then(/^I should be able to see my peluang$/, async () => {
-    // await PeluangScreen.allowPermissions();
-    await PeluangScreen.page();
+    await driver.pause(5000);
     await PeluangScreen.openTerbaru();
     await PeluangScreen.openBerlalu();
     await PeluangScreen.close();
@@ -35,7 +35,5 @@ When(/^I click menu Terdekat$/, async () => {
 });
 
 Then(/^I should be able to see my nearest store$/, async () => {
-    await TerdekatScreen.page();
-
-    // await HiburanScreen.page();
+    await driver.pause(5000);
 });

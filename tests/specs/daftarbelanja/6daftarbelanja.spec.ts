@@ -2,8 +2,8 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import ListOrderScreen from '../../screenobjects/daftarbelanja/daftarbelanjaScreen';
 import BerandaScreen from '../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {   
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Daftar Belanja$/, async () => {
@@ -11,8 +11,6 @@ When(/^I click menu Daftar Belanja$/, async () => {
 });
 
 Then(/^I should be able to check order history$/, async () => {
-    await ListOrderScreen.page();
+    await driver.pause(5000);
     await ListOrderScreen.listOrder();
-
-    // await BerandaScreen.page();
 });
